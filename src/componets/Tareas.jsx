@@ -1,8 +1,12 @@
+import Tarea from './Tarea.jsx' 
+
 const Tareas = ({tareas}) => {
    
   return ( 
     <>
-       {tareas.map((tarea) => (<h3 key={tarea.id}>{tarea.texto}</h3>))}
+       {tareas.map((tarea) => (
+            <Tarea key={tarea.id} tarea={tarea}/>
+       ))}
     </>
   )
 }
